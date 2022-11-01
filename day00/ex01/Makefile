@@ -8,7 +8,7 @@ OBJS  = $(SRCS:.cpp=.o)
 
 CC   = c++
 RM  = rm -rf
-CFLAGS = -Wall -Werror -Wextra -std=c++98
+CFLAGS = -g -Wall -Werror -Wextra -std=c++98
 
 all:
 	@$(MAKE) $(NAME)

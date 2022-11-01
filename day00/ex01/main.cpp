@@ -13,10 +13,12 @@ int main (void)
         std:: getline(std:: cin, name);
         if (name == "ADD")
         {   
-            count++;
             book.Add(count);
+            count++;
         }
-        if (name == "EXIT")
+        else if (name == "SEARCH")
+			book.Search(count);
+        else if (name == "EXIT")
             return(0);
         else
             std:: cout << "Incorrect input" << std:: endl;
