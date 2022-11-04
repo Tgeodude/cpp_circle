@@ -3,10 +3,19 @@
 
 #include <iomanip>
 
-void PhoneBook::Add(int index) {
+int PhoneBook::Add(int index) {
 
     Contact new_cont;
     std:: string tmp;
+
+	if (index >= 8)
+	{
+		for (int i = 0; i < 7; i++)
+		{
+			this->book[i] = this->book[i + 1];
+		}
+		index = 7;
+	}
 
     new_cont.setIndex(index);
     std:: cout << "Enter first name" << std:: endl;
@@ -25,6 +34,7 @@ void PhoneBook::Add(int index) {
     getline(std:: cin, tmp);
     new_cont.setDarkestSecret(tmp);
     this->book[index] = new_cont;
+	return (index);
 }
 
 void PhoneBook::ShowContactInfo(int count) const {
@@ -62,7 +72,7 @@ void PhoneBook::ShowContactInfo(int count) const {
 			nickname.resize(10, '.');
 		}
         std::cout << "|" << std::setw(10);
-		std::cout << this->book[i].getIndex();
+		std::cout << i;
 		std::cout << "|" << std::setw(10);
 		std::cout << first;
 		std::cout << "|" << std::setw(10);

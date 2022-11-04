@@ -29,13 +29,9 @@ int main (void)
         name = string_toupper(name);
         if (name == "ADD")
         {   
-            if (count >= 8)
-				std::cout << "Phone book is full!" << std::endl;
-            else
-            {
-                book.Add(count);
-                count++;
-            }
+                count = book.Add(count);
+                if (count < 8)
+                    count++;
         }
         else if (name == "SEARCH")
 			book.Search(count);

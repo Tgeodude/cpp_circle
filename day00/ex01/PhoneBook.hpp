@@ -9,7 +9,7 @@ class PhoneBook {
         void ShowContactInfo(int count) const;
 
     public :
-        void Add(int index);
+        int Add(int index);
         void Search(int count) const;
 } ;
 
