@@ -11,7 +11,6 @@ class HumanA {
 	public :
 		void attack();
 		HumanA(std::string _name, Weapon &_weapon);
-
 };
 
 #endif
