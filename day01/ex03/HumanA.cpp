@@ -6,5 +6,5 @@ HumanA::HumanA(std::string _name, Weapon &_weapon) {
 }
 
 void HumanA::attack() {
-    std:: cout << this->name << "attack" << this->weapon << std::endl;
+    std:: cout << this->name << " attacks with their " << this->weapon->getType() << std::endl;
 }
