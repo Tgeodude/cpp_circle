@@ -38,6 +38,6 @@ int main (void)
         else if (name == "EXIT")
             return(0);
         else
-            std:: cout << "Incorrect input" << std:: endl;
+            std:: cout << "\033[1;31mIncorrect input!\n \033[0m" << std:: endl;
     }
 }

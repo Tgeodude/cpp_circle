@@ -40,13 +40,13 @@ int PhoneBook::Add(int index) {
 void PhoneBook::ShowContactInfo(int count) const {
 
     int i = 0;
-    std::cout << "|" << std::setw(10);
+    std::cout << std::setw(11);
 	std::cout << "Index";
-	std::cout << "|" << std::setw(10);
+	std::cout << "|" << std::setw(11);
 	std::cout << "First Name";
-	std::cout << "|" << std::setw(10);
+	std::cout << "|" << std::setw(11);
 	std::cout << "Last Name";
-	std::cout << "|" << std::setw(10);
+	std::cout << "|" << std::setw(11);
 	std::cout << "Nickname";
 	std::cout << "|" << std::endl;
     
@@ -71,13 +71,13 @@ void PhoneBook::ShowContactInfo(int count) const {
 			nickname.resize(9);
 			nickname.resize(10, '.');
 		}
-        std::cout << "|" << std::setw(10);
+        std::cout << std::setw(11);
 		std::cout << i;
-		std::cout << "|" << std::setw(10);
+		std::cout << "|" << std::setw(11);
 		std::cout << first;
-		std::cout << "|" << std::setw(10);
+		std::cout << "|" << std::setw(11);
 		std::cout << last;
-		std::cout << "|" << std::setw(10);
+		std::cout << "|" << std::setw(11);
 		std::cout << nickname;
 		std::cout << "|" << std::endl;
 		i++;
@@ -93,9 +93,14 @@ void PhoneBook::Search(int count) const {
 	getline(std::cin, choice);
 	if (std::cin.eof() != 0)
 		exit(0);
-	number = std::stoi(choice);
+	try {
+		number = std::stoi(choice);
 	if (number < 0 || number >= count)
 		std::cout << "\033[1;31mContact not found!\n \033[0m";
 	else
 		this->book[number].ShowList();
+	}
+	catch (...) {
+		std::cout << "\033[1;31mIncorrect index!\n \033[0m" << std::endl;
+	}
 }
