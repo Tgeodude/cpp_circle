@@ -7,6 +7,7 @@ int main (void){
 	test.randomChump("kek");
 	Zombie *kek = NULL;
 	kek = kek->newZombie("lol");
+	kek->announce();
 
 	delete kek;
 	return(0);
