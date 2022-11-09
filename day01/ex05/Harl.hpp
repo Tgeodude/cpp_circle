@@ -11,9 +11,10 @@ class Harl {
 		void info(void);
 		void warning(void);
 		void error(void);
-
+		typedef void (Harl::*arrOfFunc)(void);
+		static arrOfFunc arr[4];
 	public :
 		void complain(std::string level);
-}
+};
 
 #endif
