@@ -79,6 +79,7 @@
 		"stop_token": "cpp",
 		"codecvt": "cpp",
 		"fstream": "cpp",
-		"stack": "cpp"
+		"stack": "cpp",
+		"filesystem": "cpp"
 	}
 }
