@@ -2,7 +2,7 @@
 
 int main ()
 {
-	ClapTrap A("Vitya");
+	ClapTrap A("Lol");
 	ClapTrap B("Kek");
 
 	A.attack("TARGET A");
@@ -15,7 +15,7 @@ int main ()
 	A.beRepaired(1);
 	B.beRepaired(6);
 
-	A.attack("Vitya");
+	A.attack("Lol");
 	B.attack("Kek");
 
 	return 0;

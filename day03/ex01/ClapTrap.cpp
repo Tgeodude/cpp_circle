@@ -5,7 +5,7 @@ ClapTrap::ClapTrap() {
 }
 
 ClapTrap::~ClapTrap() {
-    std::cout << "Destructor called!" << std::endl;
+    std::cout << "ClapTrap destructor called!" << std::endl;
 }
 
 ClapTrap::ClapTrap(std::string _name): name(_name), hp(10), energy(10), damage(0) {

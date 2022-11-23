@@ -18,7 +18,6 @@ int main(void)
 	Murka->makeSound();
 	std::cout <<std::endl;
 
-
 	// Animal* 	b = new Animal(); // не работает тк Animal - абстрактный класс
 	return (0);
 }
