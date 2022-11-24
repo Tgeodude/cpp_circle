@@ -2,6 +2,8 @@
 #define CONVERT_HPP
 
 # include <iostream>
+# include <cmath>
+# include <limits>
 
 class Convert
 {
@@ -11,9 +13,9 @@ public:
 	Convert(/* args */);
 	~Convert();
 	Convert(const Convert &src);
-	Convert &operator=(const Convert &src);
+	Convert &operator=(const Convert &arg);
 
-	void setValue() const;
+	void setValue(double _num);
 	double getValue() const;
 
 	void toChar() const;
@@ -21,9 +23,19 @@ public:
 	void toFloat() const;
 	void toDouble() const;
 
-	void convert(const std::string &name) const;
+	void convert(const std::string &_name) const;
 
 	typedef void(Convert::*func)() const;
+	class notDisplayable: public std::exception 
+	{
+		public:
+			virtual const char *what() const throw();
+	};
+	class impossibleToConvert: public std::exception
+	{
+		public:
+			virtual const char *what() const throw();
+	};
 
 };
 

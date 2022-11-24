@@ -1,7 +1,6 @@
-NAME  = convert
+NAME  = Serialization
 
 SRCS = ./main.cpp \
-	./Convert.cpp \
 
 OBJS  = $(SRCS:.cpp=.o)
 
