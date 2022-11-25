@@ -1,16 +1,16 @@
 #include "Base.hpp"
 
-Base *create(void) {
+Base *generate(void) {
     srand(time(NULL));
 	switch (rand() % 3){
 		case 0:
-			std::cout << "[A] created!" << std::endl;;
+			std::cout << "[A] generate!" << std::endl;;
 			return new A();
 		case 1:
-			std::cout << "[B] created!" << std::endl;;
+			std::cout << "[B] generate!" << std::endl;;
 			return new B();
 		case 2:
-			std::cout << "[C] created!" << std::endl;;
+			std::cout << "[C] generate!" << std::endl;;
 			return new C();
 		default:
 			return NULL;
@@ -51,7 +51,7 @@ void identify(Base &base) {
 
 int main(void) 
 {
-    Base *obj = create();
+    Base *obj = generate();
     std::cout << "Pounter: ";
     identify(obj);
     std::cout << "Adress: ";
